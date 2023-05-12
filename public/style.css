@@ -1,0 +1,134 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style-type: none;
+}
+ul {
+    padding-left: 0;
+}
+select {
+  /* reset */
+  margin: 0;      
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.container {
+    max-width: 1170px;
+}
+
+/* header */
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 45px 48px 45px;
+}
+.logo {
+    margin-left: 0;
+}
+.header__form {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #F9F9F9;
+    outline: 1px solid #D1D1D1;
+    border-radius: 12px;
+    padding: 10px 16px;
+}
+.form__select {
+    width: 130px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #151515;
+    background: none;
+    background-image: url('./imgs/Vector.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    border: none;
+    cursor: pointer;
+}
+.form__separator{
+    width: 20px;
+    height: 1px;
+    background: #D1D1D1;
+    transform: rotate(90deg);
+    margin-right: 24px;
+    margin-left: 24px;
+}
+.form__input {
+    width: 200px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    color: #151515;
+    background: none;
+    border: none;
+    margin-left: 0;
+}
+.form__input::placeholder {
+    color: #A9A9A9;
+}
+.form__btn {
+    cursor: pointer;
+    border: none;
+    background: none;
+    margin-right: 0;
+}
+.form__btn * {
+    transition: 0.3s;
+}
+.form__btn:hover svg path,
+.form__btn:focus-visible svg path {
+    stroke: #6A983C;
+}
+.header__btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 0;
+}
+.header__btn * {
+    transition: 0.3s;
+}
+.header__btn:hover svg path,
+.header__btn:focus-visible svg path {
+    stroke: #6A983C;
+}
+.account__btn {
+    margin-right: 40px;
+}
+.cart__btn {
+    position: relative;
+}
+.cart__btn::before {
+    content: '0';
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    background: #E5704B;
+    border-radius: 50%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    bottom: -5px;
+    left: -5px;
+}
+.cart__menu {
+    display: none;
+}
