@@ -23,7 +23,7 @@ select {
   -moz-appearance: none;
 }
 .container {
-    max-width: 1170px;
+    max-width: 1260px;
 }
 
 /* header */
@@ -107,13 +107,13 @@ select {
 .header__btn:focus-visible svg path {
     stroke: #6A983C;
 }
-.account__btn {
+.header__account-btn {
     margin-right: 40px;
 }
-.cart__btn {
+.header__cart-btn {
     position: relative;
 }
-.cart__btn::before {
+.header__cart-btn::before {
     content: '0';
     width: 16px;
     height: 16px;
@@ -129,6 +129,6 @@ select {
     bottom: -5px;
     left: -5px;
 }
-.cart__menu {
+/* .cart__menu {
     display: none;
-}
+} */
