@@ -1,22 +1,15 @@
 <template>
-  <div>
-    <CategoryMenu/>
-    <SellingMenu/>
-    <CustomersSlider/>
-  </div>
+  <MainPage/>
 </template>
 
 <script>
-import CategoryMenu from './components/CategoryMenu.vue';
-import SellingMenu from './components/SellingMenu.vue';
-import CustomersSlider from './components/CustomersSlider.vue';
+  import MainPage from './pages/MainPage.vue';
 
-export default {
-    name: "App",
-    components: { CategoryMenu, SellingMenu, CustomersSlider }
-}
+  export default {
+    components: { MainPage }
+  }
 </script>
 
 <style>
-
+  
 </style>

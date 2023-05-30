@@ -12,11 +12,14 @@
       </p>
       <div class="item__buy">
         <div class="buy__prices">
-          <p class="buy__price">
-            {{ item.price }} USD
+          <p v-if="item.sale === false" class="buy__price">
+            {{ item.price + ' USD' }}
           </p>
-          <p v-if="item.sale !== false" class="buy__price-real">
-            {{ (item.price / (item.sale / 100)).toFixed(2) }}
+          <p v-if="item.sale !== false" class="buy__price">
+            {{ (item.price - ((item.price / 100) * item.sale)).toFixed(2) + ' USD' }}
+            <span class="buy__price-real">
+              {{ item.price.toFixed(2) }}
+            </span>
           </p>
         </div>
         <button class="buy__btn">
@@ -102,6 +105,8 @@
     font-weight: 600;
     font-size: 18px;
     color: #151515;
+    display: flex;
+    flex-direction: column;
   }
   .buy__price-real {
     font-family: 'Poppins', sans-serif;

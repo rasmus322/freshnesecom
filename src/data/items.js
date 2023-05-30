@@ -5,6 +5,7 @@ export default [
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         img: '../../public/imgs/selling_item_bg.png',
         price: 0.48,
+        popularity: 2,
         sale: false
     },
     {
@@ -13,6 +14,7 @@ export default [
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         img: '../../public/imgs/selling_item_bg.png',
         price: 10.28,
+        popularity: 6,
         sale: false
     },
     {
@@ -20,8 +22,8 @@ export default [
         name: 'Diapers',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         img: '../../public/imgs/selling_item_bg.png',
-        price: 1.48,
-        
+        price: 3.40,
+        popularity: 8,
         sale: 36
     },
     {
@@ -29,7 +31,8 @@ export default [
         name: 'Milk',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         img: '../../public/imgs/selling_item_bg.png',
-        price: 1.12,
+        price: 1.50,
+        popularity: 1,
         sale: 10
     },
     {
@@ -37,7 +40,8 @@ export default [
         name: 'Drugs',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         img: '../../public/imgs/selling_item_bg.png',
-        price: 5.2,
+        price: 7.00,
+        popularity: 10,
         sale: 28
     },
     {
@@ -46,6 +50,7 @@ export default [
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         img: '../../public/imgs/selling_item_bg.png',
         price: 2.7,
+        popularity: 3,
         sale: false
     },
     {
@@ -53,7 +58,8 @@ export default [
         name: 'Fridge',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         img: '../../public/imgs/selling_item_bg.png',
-        price: 36,
+        price: 80.00,
+        popularity: 7,
         sale: 45
     },
 ]

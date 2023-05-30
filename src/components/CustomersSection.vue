@@ -4,15 +4,10 @@
       <h2 class="customers__title">
         Our customers says
       </h2>
-      <button class="customers__btn">
-        Go to all reviews 
-        <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1.5332 7.68663L4.2732 4.94663C4.39737 4.82172 4.46706 4.65276 4.46706 4.47663C4.46706 4.30051 4.39737 4.13154 4.2732 4.00663L1.60654 1.33997" stroke="#6A983C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="bevel"/>
-        </svg>
-      </button>
+      <MainBtn :name="name"/>
     </div>
     <Flicking class="customers__slider" :options="{ align: 'center', circular: false, panelsPerView: 3 }" :plugins="plugins">
-      <div v-for="customer in customers" :key="customer.id" class="customer__review">
+      <div v-for="customer in sliderCustomers" :key="customer.id" class="customer__review">
         <p class="customer__comment">
           {{ customer.comment }}
         </p>
@@ -26,39 +21,18 @@
 <script>
   import Flicking from "@egjs/vue3-flicking";
   import { Fade } from "@egjs/flicking-plugins";
+  import MainBtn from "./reusable/MainBtn.vue";
+  import customers from '../data/customers.js'
 
   export default {
     components: {
-      Flicking: Flicking
+      Flicking: Flicking,
+      MainBtn
     },
     data() {
       return {
-        customers: [
-          {
-            id: 1,
-            name: 'Maria',
-            surname: 'Nasdasodas',
-            comment: `“ This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here “`
-          },
-          {
-            id: 2,
-            name: 'Joe',
-            surname: 'Qqwerty',
-            comment: `“ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam dolorum explicabo alias placeat. “`
-          },
-          {
-            id: 3,
-            name: 'Mike',
-            surname: 'Shmit',
-            comment: `“ This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here “`
-          },
-          {
-            id: 4,
-            name: 'John',
-            surname: 'zxc',
-            comment: `“ This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here “`
-          }
-        ],
+        sliderCustomers: customers.splice(0, 5),
+        name: 'Go to all reviews',
         plugins: [new Fade()]
       }
     }
@@ -80,25 +54,6 @@
     font-size: 18px;
     color: #151515;
     margin-left: 0;
-  }
-  .customers__btn {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    color: #151515;
-    background: none;
-    border: none;
-    transition: 0.3s;
-    cursor: pointer;
-    padding: 6px 12px;
-    margin-right: 0;
-  }
-  .customers__btn svg {
-    margin-left: 13px;
-  }
-  .customers__btn:hover,
-  .customers__btn:focus-visible {
-    color: #6A983C;
   }
   .customers__slider {
     padding: 36px 0;
